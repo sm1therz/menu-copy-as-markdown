@@ -1,0 +1,18 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>copy-as-markdown fixture</title></head>
+<body>
+<h2>Fixture Heading</h2>
+<p>A paragraph with <strong>bold text</strong>, <em>italic text</em>, <code>inline_code</code> and a <a href="https://example.com/page">link label</a>.</p>
+<ul><li>first bullet</li><li>second bullet</li></ul>
+<ol><li>step one</li><li>step two</li></ol>
+<pre><code class="language-js">const a = 1 &lt; 2;
+console.log(a);</code></pre>
+<blockquote><p>quoted words</p></blockquote>
+<script>
+  // Select the whole body on load so the test needs no keystrokes.
+  addEventListener('load', function () {
+    var r = document.createRange(); r.selectNodeContents(document.body);
+    var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+  });
+</script>
+</body></html>
